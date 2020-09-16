@@ -16,23 +16,6 @@ def vec_to_grid(vec, N):
         grid.append(list(vec[i*N:(i+1)*N]))
     return grid
 
-def coord1(i,j,N, di):
-    if di == 0:
-        return i,j
-    elif di == 1:
-        return j, N-i -1
-    elif di == 2:
-        return N-i-1, N-j-1
-    elif di == 3:
-        return N-j-1, i
-    
-
-    return Ni, Nj
-
-def coord2(i,j,N, di):
-    i, j = coord1(i,j,N, di)
-    return N*i + j 
-
 
 def matrix_clamped_BC(N):
     molecule = [[0 ,0  ,1  ,0  ,0],
